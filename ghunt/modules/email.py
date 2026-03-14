@@ -114,8 +114,8 @@ async def hunt(as_client: httpx.AsyncClient, email_address: str, json_file: Path
 
     gb.rc.print("\n🗺️ Maps data", style="green4")
 
-    err, stats, reviews, photos = await gmaps.get_reviews(as_client, target.personId)
-    gmaps.output(err, stats, reviews, photos, target.personId)
+    err, stats = await gmaps.get_reviews(as_client, target.personId)
+    gmaps.output(err, stats, target.personId)
 
     gb.rc.print("\n🗓️ Calendar data\n", style="slate_blue3")
 
