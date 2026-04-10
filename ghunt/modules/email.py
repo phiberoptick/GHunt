@@ -146,8 +146,8 @@ async def hunt(as_client: httpx.AsyncClient, email_address: str, json_file: Path
                 "profile": target,
                 "play_games": player if player_results else None,
                 "maps": {
-                    "photos": photos,
-                    "reviews": reviews,
+                    "photos": None,
+                    "reviews": None,
                     "stats": stats
                 },
                 "calendar": {
